@@ -50,7 +50,7 @@ while run:
         if distance > 1000 or distance < 0:
             waiting = True
 
-    if distance >= 750 and distance < 1000:
+    if distance >= 750 and distance <= 1000:
         last_beep = beep
         beep = "beep1.wav"
     if distance >= 500 and distance < 750:
@@ -59,7 +59,7 @@ while run:
     if distance >= 250 and distance < 500:
         last_beep = beep
         beep = "beep3.wav"
-    if distance > 0 and distance < 250:
+    if distance >= 0 and distance < 250:
         last_beep = beep
         beep = "beep4.wav"
     if beep != last_beep:
