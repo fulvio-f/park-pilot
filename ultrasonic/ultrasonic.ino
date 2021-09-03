@@ -18,5 +18,5 @@ void loop() {
   digitalWrite(trigPin,LOW);
   ping = pulseIn(echoPin,HIGH);
   delay(25);
-  Serial.println(ping);
+  Serial.print(ping);
 }
