@@ -38,11 +38,6 @@ while run:
             run = False
     
     if arduinoSerialData.inWaiting() > 0:
-        distance = arduinoSerialData.readline().decode('UTF-8')
-        distance = distance.replace('\r', '')
-        distance = distance.replace('\n', '')
-        if distance == '':
-            distance = 0
         distance = round(int(distance),-1)
         if 0 <= distance <= 1000 and abs(y-(-0.8*distance+280)) > 20:
             y = int(-0.8*distance + 280)
